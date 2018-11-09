@@ -4,6 +4,8 @@ import './App.css';
 import PropTypesBad from './components/PropTypesBad';
 import PropTypesGood from './components/PropTypesGood';
 import PropTypesGoodDefault from './components/PropTypesGoodDefault';
+import JSXSpreadAttributesBad from './components/JSXSpreadAttributesBad';
+import JSXSpreadAttributesGood from './components/JSXSpreadAttributesGood';
 
 /* eslint-disable-next-line */
 class App extends Component {
@@ -30,6 +32,8 @@ class App extends Component {
         <PropTypesBad />
         <PropTypesGood />
         <PropTypesGoodDefault />
+        <JSXSpreadAttributesBad />
+        <JSXSpreadAttributesGood />
       </div>
     );
   }

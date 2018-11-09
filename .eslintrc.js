@@ -6,5 +6,6 @@ module.exports = {
   extends: "airbnb",
   "rules": {
     "strict": 0,
+    "react/prefer-stateless-function": [1, { ignorePureComponents: true }]
   },
 };

@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React, { PureComponent } from 'react';
 
-class PropDrillingGoodMenuSwapColorsView extends PureComponent {
+class PropDrillingGoodSwapColorsView extends PureComponent {
   render() {
     const { onSwapColors } = this.props;
     return (
@@ -15,8 +15,8 @@ class PropDrillingGoodMenuSwapColorsView extends PureComponent {
   }
 }
 
-PropDrillingGoodMenuSwapColorsView.propTypes = {
+PropDrillingGoodSwapColorsView.propTypes = {
   onSwapColors: PropTypes.func.isRequired,
 };
 
-export default PropDrillingGoodMenuSwapColorsView;
+export default PropDrillingGoodSwapColorsView;

@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React, { PureComponent } from 'react';
 
-class PropDrillingGoodMenuItem extends PureComponent {
+class PropDrillingGoodItem extends PureComponent {
   handleClick = () => {
     const { item, onClick } = this.props;
     onClick(item);
@@ -20,9 +20,9 @@ class PropDrillingGoodMenuItem extends PureComponent {
   }
 }
 
-PropDrillingGoodMenuItem.propTypes = {
+PropDrillingGoodItem.propTypes = {
   item: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
-export default PropDrillingGoodMenuItem;
+export default PropDrillingGoodItem;

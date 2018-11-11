@@ -1,11 +1,11 @@
 import { PropTypes } from 'prop-types';
 import React, { PureComponent } from 'react';
-import PropDrillingBadMenuItem from './PropDrillingBadMenuItem';
-import PropDrillingBadMenuA from './PropDrillingBadMenuA';
-import PropDrillingBadMenuB from './PropDrillingBadMenuB';
-import PropDrillingBadMenuC from './PropDrillingBadMenuC';
+import PropDrillingGoodMenuItem from './PropDrillingGoodMenuItem';
+import PropDrillingGoodMenuA from './PropDrillingGoodMenuA';
+import PropDrillingGoodMenuB from './PropDrillingGoodMenuB';
+import PropDrillingGoodMenuC from './PropDrillingGoodMenuC';
 
-class PropDrillingBadMenu extends PureComponent {
+class PropDrillingGoodMenu extends PureComponent {
   state = {
     item: 'A',
   };
@@ -17,11 +17,11 @@ class PropDrillingBadMenu extends PureComponent {
     const { item } = this.state;
     return (
       <div>
-        <h1>Prop Drilling Bad</h1>
+        <h1>Prop Drilling Good</h1>
         <div>
-          <PropDrillingBadMenuItem item="A" onClick={this.setItem} />
-          <PropDrillingBadMenuItem item="B" onClick={this.setItem} />
-          <PropDrillingBadMenuItem item="C" onClick={this.setItem} />
+          <PropDrillingGoodMenuItem item="A" onClick={this.setItem} />
+          <PropDrillingGoodMenuItem item="B" onClick={this.setItem} />
+          <PropDrillingGoodMenuItem item="C" onClick={this.setItem} />
           <button
             onClick={onSwapColors}
             type="button"
@@ -29,20 +29,15 @@ class PropDrillingBadMenu extends PureComponent {
             Swap Colors
           </button>
         </div>
-        {item === 'A' && (
-          <PropDrillingBadMenuA
-            bgColor={bgColor}
-            fgColor={fgColor}
-          />
-        )}
+        {item === 'A' && <PropDrillingGoodMenuA />}
         {item === 'B' && (
-          <PropDrillingBadMenuB
+          <PropDrillingGoodMenuB
             bgColor={bgColor}
             fgColor={fgColor}
           />
         )}
         {item === 'C' && (
-          <PropDrillingBadMenuC
+          <PropDrillingGoodMenuC
             bgColor={bgColor}
             fgColor={fgColor}
           />
@@ -52,10 +47,10 @@ class PropDrillingBadMenu extends PureComponent {
   }
 }
 
-PropDrillingBadMenu.propTypes = {
+PropDrillingGoodMenu.propTypes = {
   bgColor: PropTypes.string.isRequired,
   fgColor: PropTypes.string.isRequired,
   onSwapColors: PropTypes.func.isRequired,
 };
 
-export default PropDrillingBadMenu;
+export default PropDrillingGoodMenu;

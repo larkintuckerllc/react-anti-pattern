@@ -13,7 +13,7 @@ class PropDrillingGoodMenu extends PureComponent {
   setItem = item => this.setState({ item });
 
   render() {
-    const { bgColor, fgColor, onSwapColors } = this.props;
+    const { onSwapColors } = this.props;
     const { item } = this.state;
     return (
       <div>
@@ -30,26 +30,14 @@ class PropDrillingGoodMenu extends PureComponent {
           </button>
         </div>
         {item === 'A' && <PropDrillingGoodMenuA />}
-        {item === 'B' && (
-          <PropDrillingGoodMenuB
-            bgColor={bgColor}
-            fgColor={fgColor}
-          />
-        )}
-        {item === 'C' && (
-          <PropDrillingGoodMenuC
-            bgColor={bgColor}
-            fgColor={fgColor}
-          />
-        )}
+        {item === 'B' && <PropDrillingGoodMenuB />}
+        {item === 'C' && <PropDrillingGoodMenuC />}
       </div>
     );
   }
 }
 
 PropDrillingGoodMenu.propTypes = {
-  bgColor: PropTypes.string.isRequired,
-  fgColor: PropTypes.string.isRequired,
   onSwapColors: PropTypes.func.isRequired,
 };
 

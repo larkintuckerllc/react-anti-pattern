@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React, { PureComponent } from 'react';
 
-class PropDrillingGoodMenuB extends PureComponent {
+class PropDrillingBadMenuC extends PureComponent {
   render() {
     const { bgColor, fgColor } = this.props;
     return (
@@ -11,15 +11,15 @@ class PropDrillingGoodMenuB extends PureComponent {
           color: fgColor,
         }}
       >
-        Banana
+        Cataloupe
       </h3>
     );
   }
 }
 
-PropDrillingGoodMenuB.propTypes = {
+PropDrillingBadMenuC.propTypes = {
   bgColor: PropTypes.string.isRequired,
   fgColor: PropTypes.string.isRequired,
 };
 
-export default PropDrillingGoodMenuB;
+export default PropDrillingBadMenuC;

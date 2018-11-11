@@ -8,6 +8,7 @@ import JSXSpreadAttributesBad from './components/JSXSpreadAttributesBad';
 import JSXSpreadAttributesGood from './components/JSXSpreadAttributesGood';
 import SetStateAsyncBad from './components/SetStateAsyncBad';
 import SetStateAsyncGood from './components/SetStateAsyncGood';
+import PropDrillingBad from './components/PropDrillingBad';
 
 /* eslint-disable-next-line */
 class App extends Component {
@@ -38,6 +39,7 @@ class App extends Component {
         <JSXSpreadAttributesGood />
         <SetStateAsyncBad />
         <SetStateAsyncGood />
+        <PropDrillingBad />
       </div>
     );
   }

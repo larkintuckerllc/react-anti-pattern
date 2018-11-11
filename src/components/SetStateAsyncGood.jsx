@@ -1,17 +1,17 @@
 import React, { PureComponent } from 'react';
 
+const increment = ({ counter }) => ({
+  counter: counter + 1,
+});
+
 class SetStateAsyncGood extends PureComponent {
   state = {
     counter: 0,
   };
 
-  increment = ({ counter }) => ({
-    counter: counter + 1,
-  });
-
   handleClick = () => {
-    this.setState(this.increment);
-    this.setState(this.increment);
+    this.setState(increment);
+    this.setState(increment);
   }
 
   render() {

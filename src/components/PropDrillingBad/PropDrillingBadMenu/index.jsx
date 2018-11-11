@@ -4,6 +4,7 @@ import PropDrillingBadMenuItem from './PropDrillingBadMenuItem';
 import PropDrillingBadMenuA from './PropDrillingBadMenuA';
 import PropDrillingBadMenuB from './PropDrillingBadMenuB';
 import PropDrillingBadMenuC from './PropDrillingBadMenuC';
+import PropDrillingBadMenuSwapColors from './PropDrillingBadMenuSwapColors';
 
 class PropDrillingBadMenu extends PureComponent {
   state = {
@@ -22,31 +23,29 @@ class PropDrillingBadMenu extends PureComponent {
           <PropDrillingBadMenuItem item="A" onClick={this.setItem} />
           <PropDrillingBadMenuItem item="B" onClick={this.setItem} />
           <PropDrillingBadMenuItem item="C" onClick={this.setItem} />
-          <button
-            onClick={onSwapColors}
-            type="button"
-          >
-            Swap Colors
-          </button>
         </div>
         {item === 'A' && (
           <PropDrillingBadMenuA
             bgColor={bgColor}
             fgColor={fgColor}
+            onSwapColors={onSwapColors}
           />
         )}
         {item === 'B' && (
           <PropDrillingBadMenuB
             bgColor={bgColor}
             fgColor={fgColor}
+            onSwapColors={onSwapColors}
           />
         )}
         {item === 'C' && (
           <PropDrillingBadMenuC
             bgColor={bgColor}
             fgColor={fgColor}
+            onSwapColors={onSwapColors}
           />
         )}
+        <PropDrillingBadMenuSwapColors onSwapColors={onSwapColors} />
       </div>
     );
   }

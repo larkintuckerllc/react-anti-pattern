@@ -1,9 +1,9 @@
-import { PropTypes } from 'prop-types';
 import React, { PureComponent } from 'react';
 import PropDrillingGoodMenuItem from './PropDrillingGoodMenuItem';
 import PropDrillingGoodMenuA from './PropDrillingGoodMenuA';
 import PropDrillingGoodMenuB from './PropDrillingGoodMenuB';
 import PropDrillingGoodMenuC from './PropDrillingGoodMenuC';
+import PropDrillingGoodMenuSwapColors from './PropDrillingGoodMenuSwapColors';
 
 class PropDrillingGoodMenu extends PureComponent {
   state = {
@@ -13,7 +13,6 @@ class PropDrillingGoodMenu extends PureComponent {
   setItem = item => this.setState({ item });
 
   render() {
-    const { onSwapColors } = this.props;
     const { item } = this.state;
     return (
       <div>
@@ -22,23 +21,14 @@ class PropDrillingGoodMenu extends PureComponent {
           <PropDrillingGoodMenuItem item="A" onClick={this.setItem} />
           <PropDrillingGoodMenuItem item="B" onClick={this.setItem} />
           <PropDrillingGoodMenuItem item="C" onClick={this.setItem} />
-          <button
-            onClick={onSwapColors}
-            type="button"
-          >
-            Swap Colors
-          </button>
         </div>
         {item === 'A' && <PropDrillingGoodMenuA />}
         {item === 'B' && <PropDrillingGoodMenuB />}
         {item === 'C' && <PropDrillingGoodMenuC />}
+        <PropDrillingGoodMenuSwapColors />
       </div>
     );
   }
 }
-
-PropDrillingGoodMenu.propTypes = {
-  onSwapColors: PropTypes.func.isRequired,
-};
 
 export default PropDrillingGoodMenu;

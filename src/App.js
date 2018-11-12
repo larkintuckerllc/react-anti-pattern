@@ -11,6 +11,7 @@ import SetStateAsyncGood from './components/SetStateAsyncGood';
 import PropDrillingBad from './components/PropDrillingBad';
 import PropDrillingGood from './components/PropDrillingGood';
 import NoLibraryBad from './components/NoLibraryBad';
+import NoLibraryGood from './components/NoLibraryGood';
 
 /* eslint-disable-next-line */
 class App extends Component {
@@ -44,6 +45,7 @@ class App extends Component {
         <PropDrillingBad />
         <PropDrillingGood />
         <NoLibraryBad />
+        <NoLibraryGood />
       </div>
     );
   }

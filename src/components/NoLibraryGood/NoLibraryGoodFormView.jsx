@@ -1,13 +1,12 @@
 import { PropTypes } from 'prop-types';
 import React, { PureComponent } from 'react';
 
-class NoLibraryBadFormView extends PureComponent {
+class NoLibraryGoodFormView extends PureComponent {
   render() {
     const {
       firstName,
       lastName,
-      onFirstNameChange,
-      onLastNameChange,
+      onChange,
       onSubmit,
     } = this.props;
     return (
@@ -17,13 +16,13 @@ class NoLibraryBadFormView extends PureComponent {
         <h1>No Library Bad</h1>
         <div>
           <input
-            onChange={onFirstNameChange}
+            onChange={onChange('firstName')}
             value={firstName}
           />
         </div>
         <div>
           <input
-            onChange={onLastNameChange}
+            onChange={onChange('lastName')}
             value={lastName}
           />
         </div>
@@ -39,12 +38,11 @@ class NoLibraryBadFormView extends PureComponent {
   }
 }
 
-NoLibraryBadFormView.propTypes = {
+NoLibraryGoodFormView.propTypes = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
-  onFirstNameChange: PropTypes.func.isRequired,
-  onLastNameChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default NoLibraryBadFormView;
+export default NoLibraryGoodFormView;

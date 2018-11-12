@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import NoLibraryBadForm from './NoLibraryBadForm';
+import NoLibraryGoodForm from './NoLibraryGoodForm';
 
-class NoLibraryBad extends PureComponent {
+class NoLibraryGood extends PureComponent {
   handleSubmit = ({ firstName, lastName }) => {
     window.console.log(firstName);
     window.console.log(lastName);
@@ -9,9 +9,9 @@ class NoLibraryBad extends PureComponent {
 
   render() {
     return (
-      <NoLibraryBadForm onSubmit={this.handleSubmit} />
+      <NoLibraryGoodForm onSubmit={this.handleSubmit} />
     );
   }
 }
 
-export default NoLibraryBad;
+export default NoLibraryGood;

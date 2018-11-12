@@ -4,25 +4,30 @@ import NoLibraryBadFormView from './NoLibraryBadFormView';
 
 class NoLibraryBadForm extends PureComponent {
   state = {
-    value: '',
+    firstName: '',
+    lastName: '',
   };
 
-  handleChange = event => this.setState({ value: event.target.value });
+  handleFirstNameChange = event => this.setState({ firstName: event.target.value });
+
+  handleLastNameChange = event => this.setState({ lastName: event.target.value });
 
   handleSubmit = (event) => {
     event.preventDefault();
     const { onSubmit } = this.props;
-    const { value } = this.state;
-    onSubmit({ value });
+    const { firstName, lastName } = this.state;
+    onSubmit({ firstName, lastName });
   };
 
   render() {
-    const { value } = this.state;
+    const { firstName, lastName } = this.state;
     return (
       <NoLibraryBadFormView
-        onChange={this.handleChange}
+        firstName={firstName}
+        lastName={lastName}
+        onFirstNameChange={this.handleFirstNameChange}
+        onLastNameChange={this.handleLastNameChange}
         onSubmit={this.handleSubmit}
-        value={value}
       />
     );
   }

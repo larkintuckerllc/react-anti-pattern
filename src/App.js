@@ -12,6 +12,8 @@ import PropDrillingBad from './components/PropDrillingBad';
 import PropDrillingGood from './components/PropDrillingGood';
 import NoLibraryBad from './components/NoLibraryBad';
 import NoLibraryGood from './components/NoLibraryGood';
+import OverloadedBad from './components/OverloadedBad';
+import OverloadedGood from './components/OverloadedGood';
 
 /* eslint-disable-next-line */
 class App extends Component {
@@ -46,6 +48,8 @@ class App extends Component {
         <PropDrillingGood />
         <NoLibraryBad />
         <NoLibraryGood />
+        <OverloadedBad />
+        <OverloadedGood />
       </div>
     );
   }

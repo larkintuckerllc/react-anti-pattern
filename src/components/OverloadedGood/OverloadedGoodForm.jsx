@@ -9,7 +9,7 @@ const handleRender = ({
   /* eslint-disable-next-line */
   handleSubmit,
   /* eslint-disable-next-line */
-  values: { firstName, lastName }
+  values: { firstName, lastName },
 }) => (
   <OverloadedGoodFormColored
     firstName={firstName}
